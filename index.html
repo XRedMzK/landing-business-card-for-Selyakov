@@ -1,0 +1,1305 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Графический дизайнер и AI-специалист — лендинг-визитка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Графический дизайнер, вайб-кодер и специалист по AI в графике. Дизайн, визуал и автоматизация через нейросети.">
+    <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon">
+    <style>
+        .header-inner,
+        .page {
+            max-width: var(--max-width);
+            margin: 0 auto
+        }
+
+        .nav-link:hover,
+        body {
+            color: var(--text-main)
+        }
+
+        .about-right,
+        .hero-side {
+            grid-template-rows: auto auto
+        }
+
+        .image-placeholder,
+        .process-step {
+            overflow: hidden;
+            position: relative
+        }
+
+        :root {
+            --page-bg: #f5f5f7;
+            --page-bg-soft: #fbfbfd;
+            --surface: #ffffff;
+            --surface-soft: #f9f9fb;
+            --border-subtle: #e3e3ea;
+            --border-strong: #d0d0da;
+            --text-main: oklch(13% 0.028 261.692);
+            --text-muted: #6e6e73;
+            --text-soft: #8f8f95;
+            --accent: #0071e3;
+            --accent-soft: oklch(29.602% 0.06484 241.457 / 0.12);
+            --radius-xl: 28px;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-pill: 999px;
+            --shadow-soft: 0 18px 45px oklch(12.964% 0.02739 261.707 / 0.15);
+            --shadow-strong: 0 24px 70px oklch(12.964% 0.02739 261.707 / 0.15);
+            --transition-fast: 140ms ease-out;
+            --transition-med: 220ms ease-out;
+            --max-width: 1120px
+        }
+
+        .logo,
+        .nav-link {
+            border-radius: var(--radius-pill);
+            text-decoration: none
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            background: radial-gradient(circle at 0 0, #fff 0, #f8f8fb 34%, #f5f5f7 70%) fixed;
+            -webkit-font-smoothing: antialiased
+        }
+
+        .page {
+            padding: 72px 16px 48px
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            backdrop-filter: blur(20px);
+            background: linear-gradient(to bottom, rgba(251, 251, 253, .94), rgba(251, 251, 253, .86), rgba(251, 251, 253, .8), transparent);
+            border-bottom: 1px solid rgba(215, 215, 225, .9)
+        }
+
+        .header-inner {
+            padding: 10px 16px 8px;
+            display: flex;
+            align-items: center;
+            gap: 16px
+        }
+
+        h1,
+        h2 {
+            margin: 0
+        }
+
+        .logo,
+        nav {
+            align-items: center;
+            gap: 10px;
+            display: flex
+        }
+
+        .logo {
+            padding: 10px 16px;
+            background-color: oklch(12.9% .042 264.695);
+            border: 1px solid rgba(227, 227, 238, .9);
+            color: inherit;
+            box-shadow: 0 7px 18px rgba(15, 23, 42, .09);
+            justify-content: center
+        }
+
+        .logo-mark {
+            width: 32px;
+            height: 32px;
+            background-image: url(../assets/icons/logo.svg);
+            background-position: center;
+            background-size: contain
+        }
+
+        .logo-text-main {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: #f5f5f7
+        }
+
+        .hero-card-header,
+        .tag {
+            letter-spacing: .08em;
+            text-transform: uppercase
+        }
+
+        .logo-text-sub {
+            font-size: 12px;
+            color: var(--text-soft)
+        }
+
+        nav {
+            margin-left: auto;
+            font-size: 13px
+        }
+
+        .nav-link {
+            padding: 6px 10px;
+            color: var(--text-muted);
+            border: 1px solid transparent;
+            transition: color var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast)
+        }
+
+        .btn,
+        .nav-cta {
+            border-radius: var(--radius-pill)
+        }
+
+        .nav-link:hover {
+            background: rgba(0, 0, 0, .03);
+            border-color: #dbdbe6;
+            transform: translateY(-1px)
+        }
+
+        .nav-link:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px
+        }
+
+        .nav-cta {
+            padding: 7px 14px;
+            background: var(--text-main);
+            color: #fff;
+            border-color: rgba(0, 0, 0, .8);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, .24);
+            font-weight: 500
+        }
+
+        .nav-cta:hover {
+            background: #000;
+            color: #fff;
+            box-shadow: var(--shadow-strong)
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 11px 18px;
+            font-size: 14px;
+            border: 1px solid transparent;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background var(--transition-med), color var(--transition-med), box-shadow var(--transition-med), transform var(--transition-fast), border-color var(--transition-fast);
+            white-space: nowrap
+        }
+
+        .btn-primary {
+            background: oklch(74.6% .16 232.661);
+            color: #fff;
+            box-shadow: 0 14px 30px rgba(15, 23, 42, .28)
+        }
+
+        .btn-primary:hover {
+            background: oklch(68.5% .169 237.323);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-strong)
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: var(--text-main);
+            border-color: #d2d2e1;
+            box-shadow: 0 9px 20px rgba(15, 23, 42, .14)
+        }
+
+        .btn-secondary:hover {
+            background: var(--page-bg-soft);
+            transform: translateY(-1px);
+            box-shadow: 0 12px 26px rgba(15, 23, 42, .18)
+        }
+
+        .btn:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px
+        }
+
+        .btn-label {
+            font-size: 12px;
+            color: #f5f5f7
+        }
+
+        .image-placeholder {
+            display: block;
+            width: 100%;
+            border-radius: var(--radius-lg);
+            border: 1px dashed #c7c7d5;
+            background: linear-gradient(135deg, rgba(0, 0, 0, .02), rgba(0, 0, 0, 0)), repeating-linear-gradient(135deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 1px, transparent 1px, transparent 6px);
+            text-decoration: none;
+            transition: border-color var(--transition-fast), background var(--transition-med), transform var(--transition-fast), box-shadow var(--transition-med)
+        }
+
+        .image-placeholder--tall,
+        .image-placeholder--wide {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+
+        .project-card,
+        .service-card {
+            transition: transform var(--transition-fast), box-shadow var(--transition-med), border-color var(--transition-fast), background var(--transition-med)
+        }
+
+        .image-placeholder::after {
+            position: absolute;
+            left: 12px;
+            bottom: 10px;
+            right: 12px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .09em;
+            color: rgba(0, 0, 0, .55);
+            pointer-events: none
+        }
+
+        .image-placeholder--wide {
+            aspect-ratio: 16/9
+        }
+
+        .image-1 {
+            background-image: url(../assets/images/image1.jpg)
+        }
+
+        .image-2 {
+            background-image: url(../assets/images/image2.jpg)
+        }
+
+        .image-3 {
+            background-image: url(../assets/images/image3.jpg)
+        }
+
+        .image-4 {
+            background-image: url(../assets/images/image4.jpg)
+        }
+
+        .image-5 {
+            background-image: url(../assets/images/image5.jpg)
+        }
+
+        .image-6 {
+            background-image: url(../assets/images/image6.jpg)
+        }
+
+        .image-7 {
+            background-image: url(../assets/images/image7.jpg)
+        }
+
+        .image-8 {
+            background-image: url(../assets/images/image8.jpg)
+        }
+
+        .image-9 {
+            background-image: url(../assets/images/image9.jpg)
+        }
+
+        .image-placeholder--tall {
+            aspect-ratio: 3/4
+        }
+
+        .btn-primary svg,
+        .contact-link svg {
+            width: 18px;
+            height: 18px
+        }
+
+        .image-placeholder--square {
+            aspect-ratio: 1/1
+        }
+
+        .image-placeholder:hover {
+            border-style: solid;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 16px 36px rgba(15, 23, 42, .25)
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 28px
+        }
+
+        section {
+            scroll-margin-top: 90px
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.1fr);
+            gap: 28px;
+            align-items: center;
+            padding: 26px 26px 24px;
+            background: radial-gradient(circle at 0 0, #fff 0, #f5f5f7 35%, #f3f3f8 100%);
+            border-radius: 32px;
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-soft)
+        }
+
+        .hero-main {
+            display: flex;
+            flex-direction: column;
+            gap: 16px
+        }
+
+        h1 {
+            font-size: clamp(28px, 4vw, 34px);
+            line-height: 1.08;
+            letter-spacing: .01em
+        }
+
+        .hero-subtitle {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin: 0
+        }
+
+        .hero-card-header,
+        .hero-note,
+        .tag {
+            color: var(--text-soft)
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .tag {
+            padding: 4px 11px;
+            border-radius: var(--radius-pill);
+            font-size: 11px;
+            border: 1px solid #d2d2e1;
+            background: rgba(255, 255, 255, .9)
+        }
+
+        .compact-card,
+        .hero-card {
+            border-radius: var(--radius-lg)
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center
+        }
+
+        .hero-note {
+            font-size: 12px;
+            margin: 2px 0 0
+        }
+
+        .hero-side {
+            display: grid;
+            gap: 12px
+        }
+
+        .hero-side-row {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 12px
+        }
+
+        .hero-card {
+            padding: 12px 12px 11px;
+            background: rgba(255, 255, 255, .95);
+            border: 1px solid #dedee9;
+            box-shadow: 0 10px 26px rgba(15, 23, 42, .14);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            justify-content: center
+        }
+
+        .contact-link:hover,
+        .section {
+            box-shadow: var(--shadow-soft)
+        }
+
+        .hero-card-header {
+            font-size: 11px
+        }
+
+        .hero-card-main {
+            font-size: 13px;
+            color: var(--text-main);
+            line-height: 1.5
+        }
+
+        .hero-card-meta,
+        .section-kicker {
+            font-size: 11px;
+            color: var(--text-soft)
+        }
+
+        .hero-card-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            align-items: center
+        }
+
+        .hero-card-pill {
+            padding: 3px 9px;
+            border-radius: var(--radius-pill);
+            background: var(--page-bg-soft);
+            border: 1px solid var(--border-subtle);
+            font-size: 11px;
+            display: flex
+        }
+
+        .hero-mini-placeholder {
+            margin-top: 8px;
+            border-radius: 999px;
+            border-style: dashed;
+            aspect-ratio: 5/1.2;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .about-text,
+        .section {
+            flex-direction: column
+        }
+
+        .section {
+            background: var(--surface);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-subtle);
+            padding: 22px 22px 20px;
+            display: flex;
+            justify-content: space-between
+        }
+
+        .compact-card,
+        .service-card {
+            background: var(--surface-soft)
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 12px;
+            margin-bottom: 18px
+        }
+
+        .section-kicker {
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            margin-bottom: 4px
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: .02em
+        }
+
+        .section-description {
+            font-size: 13px;
+            color: var(--text-muted);
+            max-width: 460px;
+            line-height: 1.6
+        }
+
+        .about-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+            gap: 20px
+        }
+
+        .about-text {
+            font-size: 14px;
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            gap: 10px
+        }
+
+        .about-columns {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px 16px;
+            font-size: 13px;
+            color: var(--text-muted)
+        }
+
+        .about-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            color: var(--text-soft);
+            margin-bottom: 3px
+        }
+
+        .about-list {
+            list-style: none;
+            padding: 0;
+            margin: 0
+        }
+
+        .about-list li {
+            margin-bottom: 3px;
+            line-height: 1.5
+        }
+
+        .about-list li::before {
+            content: "";
+            margin-right: 6px;
+            color: var(--text-soft)
+        }
+
+        .about-right {
+            display: grid;
+            gap: 10px
+        }
+
+        .compact-card {
+            padding: 11px 12px;
+            border: 1px solid var(--border-subtle);
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.55
+        }
+
+        .compact-card-title,
+        .process-title {
+            font-size: 13px;
+            color: var(--text-main);
+            margin-bottom: 4px;
+            font-weight: 600
+        }
+
+        .grid-3,
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px
+        }
+
+        .service-card {
+            position: relative;
+            padding: 12px 12px 11px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--text-muted)
+        }
+
+        .pill,
+        .tool-tag {
+            border-radius: var(--radius-pill)
+        }
+
+        .pill,
+        .tool-card,
+        .tool-tag {
+            background: #fff
+        }
+
+        .project-card:hover,
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-soft);
+            border-color: var(--border-strong);
+            background: #fff
+        }
+
+        .service-title {
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 2px;
+            font-weight: 600
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 3px
+        }
+
+        .pill {
+            padding: 3px 8px;
+            border: 1px solid var(--border-subtle);
+            font-size: 11px;
+            color: var(--text-soft)
+        }
+
+        .tools-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 16px
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px
+        }
+
+        .tool-card {
+            padding: 10px 11px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            flex-direction: column;
+            gap: 4px
+        }
+
+        .project-meta,
+        .tool-meta {
+            justify-content: space-between
+        }
+
+        .tool-card:hover {
+            background-color: linear-gradient(135deg, #4285f4 0%, #ea4335 30%, #fbbc05 65%, #34a853 100%)
+        }
+
+        .project-title,
+        .tool-name {
+            font-size: 13px;
+            color: var(--text-main);
+            font-weight: 600
+        }
+
+        .tool-meta {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            font-size: 11px;
+            color: var(--text-soft);
+            margin-top: 2px
+        }
+
+        .tool-tag {
+            padding: 2px 7px;
+            border: 1px solid var(--border-subtle)
+        }
+
+        .tools-note {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            line-height: 1.6
+        }
+
+        .tools-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            font-size: 11px
+        }
+
+        .tools-badge {
+            padding: 4px 9px;
+            border-radius: var(--radius-pill);
+            background: var(--accent-soft);
+            border: 1px solid rgba(0, 113, 227, .3);
+            color: #044a8c
+        }
+
+        .formats-item,
+        .process-step,
+        .project-card {
+            background: var(--surface-soft)
+        }
+
+        .process-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted)
+        }
+
+        .process-step {
+            padding: 10px 10px 9px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            line-height: 1.55
+        }
+
+        .process-step::before {
+            content: attr(data-step);
+            position: absolute;
+            top: 8px;
+            right: 9px;
+            font-size: 11px;
+            color: var(--text-soft)
+        }
+
+        .project-card {
+            padding: 10px 9px 11px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--text-muted)
+        }
+
+        .project-meta,
+        footer {
+            font-size: 11px;
+            color: var(--text-soft)
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 8px
+        }
+
+        .flex-2 {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 18px
+        }
+
+        .formats-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 13px;
+            color: var(--text-muted);
+            display: grid;
+            gap: 8px
+        }
+
+        .formats-item {
+            padding: 9px 10px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+            line-height: 1.5;
+            width: 100%
+        }
+
+        .formats-label {
+            font-size: 12px;
+            color: var(--text-main);
+            font-weight: 600;
+            margin-bottom: 2px
+        }
+
+        .contact-card,
+        .contact-link {
+            font-size: 13px;
+            display: flex
+        }
+
+        .contact-card {
+            padding: 11px 11px 10px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-subtle);
+            background: radial-gradient(circle at 0 0, #fff 0, #f5f5f7 65%);
+            color: var(--text-muted);
+            flex-direction: column;
+            gap: 9px;
+            line-height: 1.6
+        }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center
+        }
+
+        .contact-link {
+            text-decoration: none;
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: var(--radius-pill);
+            border: 1px solid rgba(0, 0, 0, .12);
+            background: #fff;
+            box-shadow: 0 8px 18px rgba(15, 23, 42, .12);
+            transition: background var(--transition-med), color var(--transition-med), transform var(--transition-fast), box-shadow var(--transition-med), border-color var(--transition-fast);
+            justify-content: center;
+            align-items: center;
+            gap: 8px
+        }
+
+        .contact-link:hover {
+            background: var(--accent);
+            color: #fff;
+            transform: translateY(-1px);
+            border-color: var(--accent)
+        }
+
+        .contact-link:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px
+        }
+
+        footer {
+            margin-top: 24px;
+            padding: 14px 6px 6px;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            border-top: 1px solid #d7d7e1
+        }
+
+        @media (max-width:960px) {
+            .hero {
+                grid-template-columns: minmax(0, 1fr);
+                padding: 22px 18px 18px
+            }
+
+            .hero-side {
+                display: grid;
+                grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr)
+            }
+
+            .about-layout,
+            .flex-2,
+            .tools-layout {
+                grid-template-columns: minmax(0, 1fr)
+            }
+
+            .grid-3,
+            .process-list,
+            .projects-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+        }
+
+        @media (max-width:720px) {
+            nav {
+                display: none
+            }
+
+            .page {
+                padding-inline: 14px;
+                padding-top: 56px
+            }
+
+            .hero {
+                border-radius: 24px
+            }
+
+            .section {
+                padding: 18px 14px 16px;
+                border-radius: 22px
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start
+            }
+
+            .grid-3,
+            .hero-side,
+            .process-list,
+            .projects-grid {
+                grid-template-columns: minmax(0, 1fr)
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+            * {
+                scroll-behavior: auto !important;
+                transition: none !important
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner"><a href="#hero" class="logo">
+                <div class="logo-mark"></div>
+                <div>
+                    <div class="logo-text-main">Графический дизайн + AI</div>
+                    <div class="logo-text-sub">лендинг-визитка</div>
+                </div>
+            </a>
+            <nav><a href="#about" class="nav-link">Обо мне</a><a href="#services" class="nav-link">Задачи</a><a
+                    href="#tools" class="nav-link">Инструменты</a><a href="#process" class="nav-link">Процесс</a><a
+                    href="#projects" class="nav-link">Визуалы</a><a href="#contact"
+                    class="nav-link nav-cta">Связаться</a></nav>
+        </div>
+    </header>
+    <div class="page">
+        <main>
+            <section id="hero" class="hero">
+                <div class="hero-main">
+                    <h1 id="hero-title">Графический дизайнер, вайб-кодер и AI-специалист</h1>
+                    <p class="hero-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eveniet
+                        beatae. Dicta soluta vero aliquam in ratione ipsum vel ullam esse. Unde, aut?.</p>
+                    <div class="hero-tags"><span class="tag">айдентика</span><span class="tag">ai-графика</span><span
+                            class="tag">лендинги-визитки</span><span class="tag">автоматизация процессов</span></div>
+                    <div class="hero-actions"><a href="#" class="btn btn-primary"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="496" height="512" viewBox="0 0 496 512">
+                                <path fill="currentColor"
+                                    d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248s248-111.033 248-248S384.967 8 248 8m114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3c-3.476 18.584-10.322 24.816-16.948 25.425c-14.4 1.326-25.338-9.517-39.287-18.661c-21.827-14.308-34.158-23.215-55.346-37.177c-24.485-16.135-8.612-25 5.342-39.5c3.652-3.793 67.107-61.51 68.335-66.746c.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142q-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123c-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7q108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789c2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716a43.765 43.765 0 0 1 .417 9.769" />
+                            </svg><span>Написать в Telegram</span><span class="btn-label">кратко описать
+                                задачу</span></a><a href="#projects" class="btn btn-secondary"><span>Посмотреть
+                                визуалы</span></a></div>
+                    <p class="hero-note">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nihil quod
+                        quisquam saepe officia!</p>
+                </div>
+                <aside class="hero-side">
+                    <div class="hero-side-row">
+                        <article class="hero-card">
+                            <div>
+                                <div class="hero-card-header">Фокус</div>
+                                <div class="hero-card-main">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Explicabo, repellendus nostrum?</div>
+                            </div>
+                            <div class="hero-card-meta"><span class="hero-card-pill">структура</span><span>читабельные
+                                    блоки</span></div>
+                        </article>
+                        <article class="hero-card">
+                            <div>
+                                <div class="hero-card-header">AI в работе</div>
+                                <div class="hero-card-main">Генерация и доработка кадров через локальные модели и
+                                    ComfyUI, без потери контроля.</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="hero-side-row">
+                        <article class="hero-card">
+                            <div>
+                                <div class="hero-card-header">Формат</div>
+                                <div class="hero-card-main">Чёткий бриф → черновые направления → финальные макеты и
+                                    файлы под ваши сервисы.</div>
+                            </div>
+                            <div class="hero-card-meta"><span class="hero-card-pill">psd, ai, pdf</span><span>готово к
+                                    использованию</span></div>
+                        </article><a href="#" class="image-placeholder image-placeholder--tall image-1"></a>
+                    </div>
+                </aside>
+            </section>
+            <section id="about" class="section">
+                <div class="section-header">
+                    <div>
+                        <div class="section-kicker">о профиле</div>
+                        <h2 id="about-title">Кто я и как подхожу к задачам</h2>
+                    </div>
+                    <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        maiores, iusto odio laudantium quaerat delectus eaque in cupiditate natus.</p>
+                </div>
+                <div class="about-layout">
+                    <div class="about-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aperiam, iste, fugiat
+                            temporibus at doloribus doloremque iure corrupti reprehenderit accusantium similique
+                            sapiente soluta assumenda rem ea, eveniet itaque nisi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt earum consequatur doloremque,
+                            iusto facilis qui repudiandae eum similique hic minima. Nobis, saepe? Animi exercitationem
+                            placeat modi!</p>
+                    </div>
+                    <div class="about-right"><a href="#" class="image-placeholder image-placeholder--wide image-2"></a>
+                        <div class="compact-card">
+                            <div class="compact-card-title">Форматы и принципы</div>
+                            <div class="about-columns">
+                                <div>
+                                    <div class="about-label">форматы</div>
+                                    <ul class="about-list">
+                                        <li>лендинги-визитки</li>
+                                        <li>обложки, промо, баннеры</li>
+                                        <li>шаблоны для соцсетей</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="about-label">подход</div>
+                                    <ul class="about-list">
+                                        <li>чёткая сетка и отступы</li>
+                                        <li>минимум визуального шума</li>
+                                        <li>дизайн, который можно дорастить</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="services" class="section">
+                <div class="section-header">
+                    <div>
+                        <div class="section-kicker">что делаю</div>
+                        <h2 id="services-title">Задачи, которые можно закрыть через меня</h2>
+                    </div>
+                    <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde et
+                        dolorum optio corrupti, illum culpa magnam provident consectetur asperiores ut recusandae
+                        delectus odio.</p>
+                </div>
+                <div class="grid-3">
+                    <article class="service-card">
+                        <div class="service-title">Айдентика под продукт или личный бренд</div>
+                        <div>Базовый набор: знак или логотип, цветовая система, шрифтовые пары и примеры применения в
+                            макетах.</div>
+                        <div class="pill-row"><span class="pill">гайд по использованию</span><span class="pill">форматы
+                                под web</span></div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-title">Графика для контента и соцсетей</div>
+                        <div>Шаблоны постов, обложек и сторис, чтобы весь контент выглядел как единый проект, а не набор
+                            случайных картинок.</div>
+                        <div class="pill-row"><span class="pill">серии визуалов</span><span class="pill">несколько
+                                размеров</span></div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-title">Лендинги-визитки и простые страницы</div>
+                        <div>Структура блоков, прототип и готовый макет. Удобно отдать верстальщику или собрать на
+                            конструкторе.</div>
+                        <div class="pill-row"><span class="pill">адаптивная логика</span><span class="pill">чистый
+                                визуал</span></div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-title">AI-генерация и подбор референсов</div>
+                        <div>Настройка промтов, подбор и структурирование референсов под задачу — без бесконечной
+                            прокрутки.</div>
+                        <div class="pill-row"><span class="pill">набор направлений</span><span class="pill">чёткие
+                                ссылки</span></div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-title">Пайплайны по графике с AI</div>
+                        <div>Сборка простых цепочек от текста до визуала через локальные модели и ComfyUI, чтобы
+                            сократить ручные шаги.</div>
+                        <div class="pill-row"><span class="pill">повторяемые сценарии</span><span class="pill">настройка
+                                под задачу</span></div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-title">Чистка и доработка текущих макетов</div>
+                        <div>Пересборка уже существующего дизайна: сетка, отступы, шрифты, контраст, приведение к
+                            единому стилю.</div>
+                        <div class="pill-row"><span class="pill">бережная корректировка</span><span class="pill">без
+                                ломки стилистики</span></div>
+                    </article>
+                </div>
+            </section>
+            <section id="tools" class="section">
+                <div class="section-header">
+                    <div>
+                        <div class="section-kicker">инструменты</div>
+                        <h2 id="tools-title">Чем пользуюсь в ежедневной работе</h2>
+                    </div>
+                    <p class="section-description">В основе — рабочая связка Adobe Photoshop и AI-инструментов: Gemini
+                        Nano Banano Pro, ChatGPT&nbsp;5.1, локальные LLM и ComfyUI.</p>
+                </div>
+                <div class="tools-layout">
+                    <div class="tools-list">
+                        <article class="tool-card">
+                            <div class="tool-name">Adobe Photoshop</div>
+                            <div>Сборка макетов, ретушь, работа со слоями, масками и смарт-объектами.</div>
+                            <div class="tool-meta"><span class="tool-tag">основной рабочий инструмент</span><span>web и
+                                    печать</span></div>
+                        </article>
+                        <article class="tool-card">
+                            <div class="tool-name">Gemini Nano Banano Pro</div>
+                            <div>Генерация идей, текстов под визуал и быстрых концепций для стартового обсчёта.</div>
+                            <div class="tool-meta"><span class="tool-tag">черновые сценарии</span><span>идея →
+                                    визуал</span></div>
+                        </article>
+                        <article class="tool-card">
+                            <div class="tool-name">ChatGPT 5.1</div>
+                            <div>Структурирование задач, промты, разбор пайплайнов и оптимизация процесса.</div>
+                            <div class="tool-meta"><span class="tool-tag">структура и логика</span><span>описание
+                                    пайплайнов</span></div>
+                        </article>
+                        <article class="tool-card">
+                            <div class="tool-name">Локальные LLM-модели</div>
+                            <div>Приватные задачи и кастомные сценарии без вывода данных наружу.</div>
+                            <div class="tool-meta"><span class="tool-tag">офлайн-сценарии</span><span>адаптация под
+                                    проект</span></div>
+                        </article>
+                        <article class="tool-card">
+                            <div class="tool-name">ComfyUI</div>
+                            <div>Гибкая сборка цепочек генерации: от промта до финального кадра с контролем шагов.</div>
+                            <div class="tool-meta"><span class="tool-tag">нодовые графы</span><span>управляемый
+                                    результат</span></div>
+                        </article>
+                        <article class="tool-card">
+                            <div class="tool-name">Дополнительные сервисы</div>
+                            <div>Figma, Canva и другие инструменты — если удобно продолжать работу в вашей среде.</div>
+                            <div class="tool-meta"><span class="tool-tag">подстройка под команду</span><span>общие
+                                    файлы</span></div>
+                        </article>
+                    </div>
+                    <aside>
+                        <p class="tools-note">AI-инструменты здесь как ускоритель: генерация вариантов, подбор
+                            направлений, тестирование гипотез. Финальный вид всегда проходит через нормальную проверку
+                            дизайна.</p>
+                        <div class="tools-badges"><span class="tools-badge">быстрые черновики</span><span
+                                class="tools-badge">варианты для выбора</span><span class="tools-badge">меньше ручной
+                                рутины</span></div>
+                    </aside>
+                </div>
+            </section>
+            <section id="process" class="section">
+                <div class="section-header">
+                    <div>
+                        <div class="section-kicker">процесс</div>
+                        <h2 id="process-title">Как строится работа шаг за шагом</h2>
+                    </div>
+                    <p class="section-description">Без лишней драмы: фиксируем задачу, тестируем направления, собираем
+                        рабочую версию и доводим до финала.</p>
+                </div>
+                <ol class="process-list">
+                    <li class="process-step" data-step="01">
+                        <div class="process-title">Бриф и вводные</div>
+                        <div>Задачи, ограничения, примеры того, что нравится, и понимание, где будет жить визуал.</div>
+                    </li>
+                    <li class="process-step" data-step="02">
+                        <div class="process-title">Черновые направления</div>
+                        <div>Несколько вариантов: ручной дизайн + AI, чтобы быстро сравнить подходы и выбрать курс.
+                        </div>
+                    </li>
+                    <li class="process-step" data-step="03">
+                        <div class="process-title">Сборка макетов</div>
+                        <div>Сетка, типографика, отступы, финальный визуал без «случайных» элементов.</div>
+                    </li>
+                    <li class="process-step" data-step="04">
+                        <div class="process-title">Файлы и передача</div>
+                        <div>Готовые исходники и краткое описание, как дальше использовать и масштабировать дизайн.
+                        </div>
+                    </li>
+                </ol>
+            </section>
+            <section id="projects" class="section">
+                <div class="section-header">
+                    <div>
+                        <div class="section-kicker">визуалы</div>
+                        <h2 id="projects-title">Слоты под работы и примеры</h2>
+                    </div>
+                    <p class="section-description">Ниже — заглушки под реальные проекты. Каждую ссылку можно заменить на
+                        собственное изображение или кейс.</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card"><a href="#"
+                            class="image-placeholder image-placeholder--wide image-3"></a>
+                        <div class="project-title">Лендинг-визитка под запуск продукта</div>
+                        <div>Чистая структура блоков и визуал, который легко дополнять новыми элементами.</div>
+                        <div class="project-meta"><span>одностраничный сайт</span><span>web-макет</span></div>
+                    </article>
+                    <article class="project-card"><a href="#"
+                            class="image-placeholder image-placeholder--wide image-4"></a>
+                        <div class="project-title">Линейка обложек для контента</div>
+                        <div>Серия визуалов для видео, подкастов или статей в одной стилистике.</div>
+                        <div class="project-meta"><span>айдентика контента</span><span>серийная графика</span></div>
+                    </article>
+                    <article class="project-card"><a href="#"
+                            class="image-placeholder image-placeholder--wide image-5"></a>
+                        <div class="project-title">AI-креативы для промо</div>
+                        <div>Сценарии, собранные через ComfyUI и доработанные в Adobe Photoshop.</div>
+                        <div class="project-meta"><span>ai + ручная правка</span><span>готово к запуску</span></div>
+                    </article>
+                    <article class="project-card"><a href="#"
+                            class="image-placeholder image-placeholder--wide image-6"></a>
+                        <div class="project-title">Обновление текущего визуала</div>
+                        <div>Пересборка существующих материалов без резкой смены стиля.</div>
+                        <div class="project-meta"><span>редизайн без обнуления</span><span>чистка макетов</span></div>
+                    </article>
+                    <article class="project-card"><a href="#"
+                            class="image-placeholder image-placeholder--wide image-7"></a>
+                        <div class="project-title">Набор шаблонов для соцсетей</div>
+                        <div>Шаблоны под разные форматы, чтобы команда могла быстро собирать посты.</div>
+                        <div class="project-meta"><span>stories, посты</span><span>удобно масштабировать</span></div>
+                    </article>
+                    <article class="project-card"><a href="#"
+                            class="image-placeholder image-placeholder--wide image-8"></a>
+                        <div class="project-title">Коллажи и визуальные серии</div>
+                        <div>Серийные кадры, собранные через AI и ручную доработку для кампаний.</div>
+                        <div class="project-meta"><span>серии кадров</span><span>единый стиль</span></div>
+                    </article>
+                </div>
+            </section>
+            <section id="contact" class="section">
+                <div class="section-header">
+                    <div>
+                        <div class="section-kicker">форматы и связь</div>
+                        <h2 id="contact-title">Как начать и как удобнее связаться</h2>
+                    </div>
+                    <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+                        porro minus doloribus provident blanditiis error totam voluptate ullam tempore.</p>
+                </div>
+                <div class="flex-2">
+                    <div>
+                        <ul class="formats-list">
+                            <li class="formats-item">
+                                <div>
+                                    <div class="formats-label">Разовый проект</div>
+                                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                </div><span>фикс-прайс</span>
+                            </li>
+                            <li class="formats-item">
+                                <div>
+                                    <div class="formats-label">Пакет задач</div>
+                                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
+                                </div><span>поэтапно</span>
+                            </li>
+                            <li class="formats-item">
+                                <div>
+                                    <div class="formats-label">Сопровождение</div>
+                                    <div>Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                                </div><span>договорённость</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <aside class="contact-card">
+                        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, hic error! Dolore!</div>
+                        <div class="contact-row"><a href="#" class="contact-link"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="496" height="512" viewBox="0 0 496 512">
+                                    <path fill="currentColor"
+                                        d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248s248-111.033 248-248S384.967 8 248 8m114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3c-3.476 18.584-10.322 24.816-16.948 25.425c-14.4 1.326-25.338-9.517-39.287-18.661c-21.827-14.308-34.158-23.215-55.346-37.177c-24.485-16.135-8.612-25 5.342-39.5c3.652-3.793 67.107-61.51 68.335-66.746c.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142q-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123c-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7q108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789c2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716a43.765 43.765 0 0 1 .417 9.769" />
+                                </svg>Lorem, ipsum dolor.</a><a href="mailto:example@mail.com" class="contact-link"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1024" height="1024"
+                                    viewBox="0 0 1024 1024">
+                                    <path fill="currentColor" fill-opacity=".15"
+                                        d="M477.5 536.3L135.9 270.7l-27.5-21.4l27.6 21.5V792h752V270.8L546.2 536.3a55.99 55.99 0 0 1-68.7 0" />
+                                    <path fill="currentColor" fill-opacity=".15"
+                                        d="m876.3 198.8l39.3 50.5l-27.6 21.5l27.7-21.5l-39.3-50.5z" />
+                                    <path fill="currentColor"
+                                        d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32m-94.5 72.1L512 482L190.5 232.1zm54.5 38.7V792H136V270.8l-27.6-21.5l27.5 21.4l341.6 265.6a55.99 55.99 0 0 0 68.7 0zl27.6-21.5l-39.3-50.5h.1l39.3 50.5z" />
+                                </svg>Lorem, ipsum dolor.</a></div><a href="#"
+                            class="image-placeholder image-placeholder--wide image-9"></a>
+                    </aside>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div>©BlendRed</div>
+            <div>Сделано за 30 минут чтобы не втыкать</div>
+        </footer>
+    </div>
+</body>
+
+</html>
